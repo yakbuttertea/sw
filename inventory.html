@@ -101,6 +101,9 @@ $(document).ready(function() {
 			{ data: "date" },
 			{ data: null, render: function ( data, type, row ) {
 				// Combine the Location and Label into a single table field
+				// Most of Label field in database is empty sometimes it contains a P to let
+				// us know the herbs are labelled. So if it contains a P, I need the field
+				// to be added to the location field and displayed in the datatable.
 					return data.location+' ('+data.label+')';
 			} },
 			{ data: "nboxes" }
